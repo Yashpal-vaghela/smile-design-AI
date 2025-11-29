@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smile Capture</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="manifest" href="{% static 'manifest.json' %}">
+</head>
+<body>
+  <div class="container">
+    <video id="cam" autoplay playsinline></video>
+    <canvas id="overlay"></canvas>
+
+    <div class="controls">
+      <button id="btn-capture">Capture Now</button>
+    </div>
+
+  </div>
+
+  <script type="module" src="{% static 'js/facemesh_capture.js' %}"></script>
+   <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("{% static 'service-worker.js' %}")
+        .then(reg => console.log("Service Worker Registered:", reg.scope))
+        .catch(err => console.log("SW registration failed:", err));
+    }
+  </script>
+</body>
+</html>

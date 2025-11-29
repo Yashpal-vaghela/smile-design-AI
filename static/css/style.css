@@ -1,0 +1,8 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f6f8fa; }
+.container { position: relative; max-width: 900px; margin: 20px auto; padding: 10px; background: white; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+video { display: block; width: 100%; max-height: 480px; background: black; }
+canvas { position: absolute; top: 0; left: 0; pointer-events: none; }
+.controls { margin-top: 10px; text-align: center; }
+button { padding: 10px 18px; font-size: 16px; cursor: pointer; }
+#preview { margin-top: 12px; text-align: center; }
+#preview img { max-width: 320px; border-radius: 6px; border: 1px solid #ddd; }
